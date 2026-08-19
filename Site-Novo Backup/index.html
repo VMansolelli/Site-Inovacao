@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Senac Salto · Portal de Inovação</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav-inner">
+        <a href="#top" class="brand">
+          <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="#004A8D" />
+            <path d="M20 8 L30 21 L20 33 L10 21 Z" fill="#F7941D" />
+            <path d="M20 8 L20 33" stroke="#FDC180" stroke-width="1.6" />
+          </svg>
+          <span class="brand-text"><b>Senac Salto Inova</b><span>Portal de Inovação</span></span>
+        </a>
+        <nav class="links" id="navLinks">
+          <a href="#mural">Mural de Notícias</a>
+          <a href="#quemsomos">Quem Somos</a>
+          <a href="#oquefazemos">O que Fazemos</a>
+          <a href="#saberes">Troca de Saberes</a>
+          <a href="#enviar">Envie sua Ideia</a>
+          <button type="button" class="navlink" id="navRestrito">Área Restrita</button>
+        </nav>
+        <div class="nav-actions">
+          <a href="#mural" class="btn btn-blue btn-sm">Ver Mural</a>
+          <a href="#enviar" class="btn btn-orange btn-sm">Enviar Ideia</a>
+        </div>
+        <button type="button" class="burger" id="burgerBtn" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <svg class="decor squiggle decor-hero-wave" viewBox="0 0 100 40"><path d="M2 20 Q 20 2, 38 20 T 74 20 T 110 20" stroke="#F7941D" stroke-width="5" fill="none" stroke-linecap="round" /></svg>
+        <div class="decor tri tri-orange decor-hero-triangle"></div>
+        <div class="decor circle-solid decor-hero-circle"></div>
+        <div class="decor dot-grid decor-hero-dots"></div>
+        <div class="decor tri-outline decor-hero-outline"></div>
+        <div class="wrap hero-grid">
+          <div>
+            <span class="eyebrow">Portal ativo · Senac Salto</span>
+            <h1>Toda ideia começa <em>dobrada</em> — nós ajudamos a desdobrar.</h1>
+            <p class="lead">
+              O portal de inovação do Senac Salto: acompanhe as ações realizadas pelas turmas no mural de notícias, troque conhecimento com colegas na Troca de Saberes e envie sua ideia para melhorar
+              a unidade.
+            </p>
+            <div class="hero-cta">
+              <a href="#mural" class="btn btn-blue">📰 Ver mural de notícias</a>
+              <a href="#enviar" class="btn btn-orange">💡 Enviar minha ideia</a>
+            </div>
+            <div class="stat-row">
+              <div class="stat"><b id="statAcoes">0</b><span>Ações publicadas</span></div>
+              <div class="stat"><b id="statIdeias">0</b><span>Ideias recebidas</span></div>
+              <div class="stat"><b id="statOficinasHero">0</b><span>Oficinas ativas</span></div>
+            </div>
+          </div>
+          <div class="crane-stage">
+            <div class="crane-paper p1"></div>
+            <div class="crane-paper p2"></div>
+            <svg id="craneSvg" class="crane-float" viewBox="0 0 220 220" fill="none">
+              <polygon points="110,20 190,110 150,190 110,150 70,190 30,110" fill="#F7F3EA" stroke="#0F2A4A" stroke-width="2" />
+              <polygon points="110,20 150,190 110,150" fill="#0B63C5" opacity=".85" />
+              <polygon points="110,20 70,190 110,150" fill="#E8792E" opacity=".9" />
+              <polygon points="110,20 190,110 110,150" fill="#0F2A4A" opacity=".08" />
+              <circle cx="110" cy="20" r="4" fill="#0F2A4A" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- MURAL DE NOTICIAS -->
+      <section id="mural" class="section-alt">
+        <div class="wrap">
+          <div class="section-head section-head-row">
+            <div>
+              <span class="eyebrow">Senac News</span>
+              <h2>Mural de Notícias</h2>
+              <p class="section-description section-description-limited">
+                As ações realizadas pelas turmas do Senac Salto: projetos, eventos, visitas técnicas e novidades da unidade — contadas por quem fez.
+              </p>
+            </div>
+            <button class="btn btn-orange" id="openNoticiaModal">📸 Publicar uma Ação</button>
+          </div>
+          <div class="mural-grid" id="muralGrid"></div>
+        </div>
+      </section>
+
+      <!-- QUEM SOMOS -->
+      <section id="quemsomos">
+        <svg class="decor squiggle decor-about-wave" viewBox="0 0 100 40"><path d="M2 20 Q 20 2, 38 20 T 74 20 T 110 20" stroke="#004A8D" stroke-width="5" fill="none" stroke-linecap="round" /></svg>
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Conheça-nos</span>
+            <h2>Quem Somos</h2>
+          </div>
+          <div class="quem-grid">
+            <div class="quem-main">
+              <div class="decor circle-solid decor-about-circle"></div>
+              <h3>Ideias que viram ação, todo mês.</h3>
+              <p>Somos um grupo de colaboradores do Senac Salto dedicados a transformar sugestões em melhorias reais para a nossa comunidade — das salas de aula à recepção.</p>
+              <p>Escuta ativa, transparência total e respeito absoluto: cada ideia é avaliada sem julgamentos, olhando apenas para o potencial de impacto positivo.</p>
+            </div>
+            <div class="mini-grid">
+              <div class="mini-card">
+                <h4>🎯 Nossa Missão</h4>
+                <p>Inovar práticas pedagógicas e tecnológicas, criando um ambiente de aprendizagem mais dinâmico para os alunos.</p>
+              </div>
+              <div class="mini-card">
+                <h4>🤝 Nosso Compromisso</h4>
+                <p>Escuta ativa, transparência total e respeito absoluto em cada sugestão recebida.</p>
+              </div>
+              <div class="mini-card">
+                <h4>📍 Onde estamos</h4>
+                <p>Unidade Senac Salto — Salto/SP. Reuniões mensais do comitê para análise das ideias.</p>
+              </div>
+              <div class="mini-card">
+                <h4>🔒 Anonimato</h4>
+                <p>Você decide se quer se identificar. Toda ideia é levada a sério, com ou sem nome.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- O QUE FAZEMOS -->
+      <section id="oquefazemos" class="section-alt">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">14 Ações Estratégicas</span>
+            <h2>O que Fazemos</h2>
+            <p class="section-description">As 14 ações estratégicas do Comitê de Inovação Senac Salto, organizadas em pilares de transformação educacional.</p>
+          </div>
+          <div class="acoes-grid" id="acoesGrid"></div>
+        </div>
+      </section>
+
+      <!-- TROCA DE SABERES -->
+      <section id="saberes">
+        <div class="decor dot-grid decor-saberes-dots"></div>
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow">Aprendizagem entre pares</span>
+            <h2>Senac Troca de Saberes</h2>
+            <p class="section-description">Professores e docentes oferecem oficinas rápidas sobre o que sabem — Excel, Canva, oratória, o que for útil — e qualquer funcionário pode se inscrever.</p>
+          </div>
+          <div class="saberes-actions">
+            <button class="btn btn-blue" id="openOficinaForm">👨‍🏫 Sou docente, quero oferecer uma oficina</button>
+            <a href="#saberesLista" class="btn btn-outline">🙋 Ver oficinas e me inscrever</a>
+          </div>
+
+          <form id="formOficina" class="mcard form-grid form-oficina hidden">
+            <h4 class="form-title">Nova oficina</h4>
+            <div><label>Nome da oficina *</label><input type="text" id="ofNome" placeholder="Ex: Oficina de Excel Avançado" required /></div>
+            <div class="two-col">
+              <div><label>Seu nome (docente) *</label><input type="text" id="ofMinistrante" required /></div>
+              <div><label>Área / curso *</label><input type="text" id="ofArea" required /></div>
+            </div>
+            <div class="two-col">
+              <div><label>Data *</label><input type="date" id="ofData" required /></div>
+              <div class="time-fields">
+                <div class="field-grow"><label>Início *</label><input type="time" id="ofInicio" required /></div>
+                <div class="field-grow"><label>Término *</label><input type="time" id="ofTermino" required /></div>
+              </div>
+            </div>
+            <div class="two-col">
+              <div>
+                <label>Local *</label>
+                <select id="ofLocal" required>
+                  <option value="">Selecione o local</option>
+                  <option>🎓 Sala de Aula</option>
+                  <option>🎭 Auditório</option>
+                  <option>💻 Laboratório de Informática</option>
+                  <option>📚 Biblioteca</option>
+                  <option>🌿 Área Externa</option>
+                  <option>📍 Outro</option>
+                </select>
+              </div>
+              <div><label>Vagas (opcional)</label><input type="number" id="ofVagas" min="1" placeholder="Deixe em branco para sem limite" /></div>
+            </div>
+            <button type="submit" class="btn btn-blue btn-center">Publicar Oficina</button>
+          </form>
+
+          <div id="saberesLista"></div>
+        </div>
+      </section>
+
+      <!-- ENVIE SUA IDEIA -->
+      <section id="enviar" class="section-alt">
+        <div class="wrap">
+          <div class="two-col">
+            <div>
+              <span class="eyebrow">O coração do portal</span>
+              <h2 class="section-title-spaced">Envie sua Ideia</h2>
+              <p>Sua contribuição é valiosa. Compartilhe sugestões para melhorar o dia a dia do Senac Salto — pode ser anônimo, sem problema nenhum.</p>
+              <div class="note note-spaced">🔒 <span>Suas informações são tratadas com total sigilo e respeito.</span></div>
+            </div>
+            <form id="formIdeia" class="mcard form-grid">
+              <div><label>Seu nome (opcional)</label><input type="text" id="ideiaNome" placeholder="Deixe em branco para enviar anônimo" /></div>
+              <div>
+                <label>Você é</label>
+                <div class="choice-row" id="ideiaPerfil" data-value="Aluno">
+                  <button type="button" class="choice active" data-val="Aluno">🎓 Aluno</button>
+                  <button type="button" class="choice" data-val="Funcionário">👔 Funcionário</button>
+                  <button type="button" class="choice" data-val="Outro">🌟 Outro</button>
+                </div>
+              </div>
+              <div>
+                <label>Categoria da ideia</label>
+                <select id="ideiaCategoria">
+                  <option>🖥️ Tecnologia e Infraestrutura</option>
+                  <option>📚 Métodos Pedagógicos</option>
+                  <option>🏫 Ambiente e Espaços</option>
+                  <option>🎉 Eventos e Atividades</option>
+                  <option>🤝 Atendimento e Serviços</option>
+                  <option>💭 Outro</option>
+                </select>
+              </div>
+              <div><label>Sua ideia *</label><textarea id="ideiaTexto" required placeholder="Conte com detalhes a sua sugestão..."></textarea></div>
+              <button type="submit" class="btn btn-orange btn-center">Enviar Minha Ideia</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODAL: publicar ação -->
+    <div class="modal-overlay" id="modalNoticia">
+      <div class="modal">
+        <button type="button" class="modal-close" data-close="modalNoticia">✕</button>
+        <h3 class="modal-title">📸 Publicar uma Ação</h3>
+        <p class="modal-description">Conte o que sua turma realizou — a novidade entra na fila de aprovação e vai para o mural.</p>
+        <form id="formNoticia" class="form-grid">
+          <div><label>Título da ação *</label><input type="text" id="ntTitulo" required placeholder="Ex: Feira de Empreendedorismo 2026" /></div>
+          <div class="two-col">
+            <div><label>Turma responsável *</label><input type="text" id="ntTurma" required placeholder="Ex: 2º DS Manhã" /></div>
+            <div><label>Curso *</label><input type="text" id="ntCurso" required placeholder="Ex: Des. de Sistemas" /></div>
+          </div>
+          <div><label>Nome de quem publica</label><input type="text" id="ntAutor" placeholder="Professor(a) responsável (opcional)" /></div>
+          <div><label>O que foi realizado? *</label><textarea id="ntDescricao" required></textarea></div>
+          <div>
+            <label>Categoria *</label>
+            <select id="ntCategoria" required>
+              <option value="">Selecione uma categoria</option>
+              <option>🎯 Projeto de Sala</option>
+              <option>🏆 Evento</option>
+              <option>🔬 Visita Técnica</option>
+              <option>🤝 Ação Social</option>
+              <option>💻 Tecnologia</option>
+              <option>🌱 Sustentabilidade</option>
+              <option>⭐ Outro</option>
+            </select>
+          </div>
+          <div>
+            <label>Foto da ação *</label>
+            <div class="upload-box" id="uploadBox">
+              <span id="uploadLabel">📸 Clique aqui para enviar a foto</span>
+              <div class="field-hint">JPG, PNG ou GIF · redimensionada automaticamente</div>
+              <img id="uploadPreview" class="hidden" alt="Pré-visualização da foto selecionada" />
+            </div>
+            <input type="file" id="ntInput" accept="image/*" class="hidden" />
+          </div>
+          <button type="submit" class="btn btn-orange btn-center">Publicar no Mural</button>
+          <div class="note">🔒 <span>Sua publicação passa por aprovação do comitê antes de aparecer no mural público.</span></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- MODAL: inscrição em oficina -->
+    <div class="modal-overlay" id="modalInscricao">
+      <div class="modal">
+        <button type="button" class="modal-close" data-close="modalInscricao">✕</button>
+        <h3 class="modal-title">📋 Inscrição</h3>
+        <p class="modal-description" id="inscricaoOficinaNome"></p>
+        <form id="formInscricao" class="form-grid">
+          <div><label>Nome completo *</label><input type="text" id="inscNome" required /></div>
+          <div><label>Cargo *</label><input type="text" id="inscCargo" required /></div>
+          <div><label>Área / Departamento *</label><input type="text" id="inscArea" required /></div>
+          <div><label>E-mail administrativo *</label><input type="email" id="inscEmail" required /></div>
+          <button type="submit" class="btn btn-orange btn-center">Confirmar Inscrição</button>
+          <div class="note">🔒 <span>Seus dados são usados apenas para controle interno das atividades.</span></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- RESTRITO: dialog em tela cheia (nova "página") -->
+    <dialog id="restritoDialog">
+      <div class="restrito-page">
+        <div class="restrito-top">
+          <span class="restrito-title">🔒 Painel do Comitê · Área Restrita</span>
+          <button type="button" class="back" id="closeRestrito">← Voltar ao portal</button>
+        </div>
+        <div class="restrito-body">
+          <div id="adminGate" class="admin-gate">
+            <p class="admin-gate-description">Acesso exclusivo para membros do Comitê de Inovação Senac Salto.</p>
+            <input type="text" id="adminPass" placeholder="Senha de acesso" class="admin-password" />
+            <button type="button" class="btn btn-orange btn-center admin-enter" id="adminEnter">Entrar</button>
+            <p class="field-hint admin-hint">Senha de demonstração: <b>salto2026</b></p>
+          </div>
+
+          <div id="adminPanel" class="hidden">
+            <div class="stat-cards">
+              <div class="stat-card"><b id="statNoticiasPendentes">0</b><span>Ações aguardando aprovação</span></div>
+              <div class="stat-card"><b id="statIdeiasAdmin">0</b><span>Ideias recebidas</span></div>
+              <div class="stat-card"><b id="statOficinasAdmin">0</b><span>Oficinas ativas</span></div>
+            </div>
+            <div class="admin-tabs">
+              <button type="button" class="admin-tab active" data-atab="noticias">📰 Mural</button>
+              <button type="button" class="admin-tab" data-atab="saberes">🧑‍🏫 Troca de Saberes</button>
+              <button type="button" class="admin-tab" data-atab="ideias">💡 Ideias</button>
+            </div>
+
+            <div class="admin-panel active" id="apanel-noticias">
+              <h4 class="admin-heading">⏳ Aguardando aprovação</h4>
+              <div id="noticiasPendentesList"></div>
+              <h4 class="admin-heading admin-heading-spaced">✅ No mural</h4>
+              <div id="noticiasAprovadasList"></div>
+            </div>
+
+            <div class="admin-panel" id="apanel-saberes">
+              <h4 class="admin-heading">📋 Oficinas publicadas</h4>
+              <div id="oficinasAdminList"></div>
+            </div>
+
+            <div class="admin-panel" id="apanel-ideias">
+              <div id="ideiasAdminList"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <h4>Senac Salto Inova</h4>
+          <p>O portal de inovação, notícias e troca de saberes da unidade Senac Salto.</p>
+        </div>
+        <div>
+          <h4>Nosso Compromisso</h4>
+          <ul>
+            <li>Escuta sem julgamentos</li>
+            <li>Transparência total</li>
+            <li>Respeito à privacidade</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li>📍 Senac Salto</li>
+            <li>Sua voz importa. Cada ideia é uma semente de transformação.</li>
+            <li><button type="button" class="navlink" id="footRestrito">Acessar área restrita</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap foot-bottom">
+        <span>© 2026 Comitê de Inovação · Senac Salto. Todos os direitos reservados.</span>
+        <span>Feito com 🧡 pela comunidade Senac Salto</span>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
